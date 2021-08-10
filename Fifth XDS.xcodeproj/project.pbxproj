@@ -22,6 +22,10 @@
 		4E92C6CC26C2468A00183FA3 /* hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6CA26C2468A00183FA3 /* hideKeyboard.swift */; };
 		4E92C6CE26C2469500183FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6CD26C2469500183FA3 /* AppDelegate.swift */; };
 		4E92C6D026C246DD00183FA3 /* KeyboardAwareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6CF26C246DD00183FA3 /* KeyboardAwareModifier.swift */; };
+		4ED842E626C275EA00E17565 /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842E526C275EA00E17565 /* CustomTF.swift */; };
+		4ED842E826C27A8600E17565 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842E726C27A8600E17565 /* LoginView.swift */; };
+		4ED842EA26C27CE200E17565 /* HomeForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842E926C27CE200E17565 /* HomeForget.swift */; };
+		4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842EC26C2802000E17565 /* SuccesForget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		4E92C6CA26C2468A00183FA3 /* hideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hideKeyboard.swift; sourceTree = "<group>"; };
 		4E92C6CD26C2469500183FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E92C6CF26C246DD00183FA3 /* KeyboardAwareModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareModifier.swift; sourceTree = "<group>"; };
+		4ED842E526C275EA00E17565 /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
+		4ED842E726C27A8600E17565 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4ED842E926C27CE200E17565 /* HomeForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeForget.swift; sourceTree = "<group>"; };
+		4ED842EC26C2802000E17565 /* SuccesForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesForget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4F577026C25C7F00F61F85 /* CustomCorners.swift */,
+				4ED842E526C275EA00E17565 /* CustomTF.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -67,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4F577326C25F0900F61F85 /* RegisterView.swift */,
+				4ED842E726C27A8600E17565 /* LoginView.swift */,
 			);
 			path = reg;
 			sourceTree = "<group>";
@@ -75,8 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				4E92C6C526C2436B00183FA3 /* HomeInfo.swift */,
-				4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */,
-				4E4F576B26C25BA100F61F85 /* MainRegister.swift */,
+				4ED842EB26C27CF200E17565 /* log&reg */,
+				4ED842E926C27CE200E17565 /* HomeForget.swift */,
+				4ED842EC26C2802000E17565 /* SuccesForget.swift */,
 			);
 			path = registration;
 			sourceTree = "<group>";
@@ -166,6 +177,15 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		4ED842EB26C27CF200E17565 /* log&reg */ = {
+			isa = PBXGroup;
+			children = (
+				4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */,
+				4E4F576B26C25BA100F61F85 /* MainRegister.swift */,
+			);
+			path = "log&reg";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,12 +258,16 @@
 				4E92C6CB26C2468A00183FA3 /* Extensions_ui.swift in Sources */,
 				4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */,
 				4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */,
+				4ED842E826C27A8600E17565 /* LoginView.swift in Sources */,
 				4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */,
 				4E92C6B426C2433C00183FA3 /* ContentView.swift in Sources */,
 				4E92C6C626C2436B00183FA3 /* HomeInfo.swift in Sources */,
 				4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */,
 				4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */,
+				4ED842E626C275EA00E17565 /* CustomTF.swift in Sources */,
+				4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */,
 				4E92C6CE26C2469500183FA3 /* AppDelegate.swift in Sources */,
+				4ED842EA26C27CE200E17565 /* HomeForget.swift in Sources */,
 				4E92C6CC26C2468A00183FA3 /* hideKeyboard.swift in Sources */,
 				4E92C6D026C246DD00183FA3 /* KeyboardAwareModifier.swift in Sources */,
 				4E92C6C826C244C800183FA3 /* InfoModel.swift in Sources */,

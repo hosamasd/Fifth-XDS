@@ -25,7 +25,6 @@ struct MainRegister: View {
                 
                 HStack {
                     
-                    Spacer()
                     
                     Button(action: {withAnimation{vm.isLogin.toggle()}}, label: {
                         VStack {
@@ -42,8 +41,9 @@ struct MainRegister: View {
                                 .opacity(vm.isLogin ? 1 : 0)
                         }
                     })
-                    .padding(.trailing,48)
                     
+                    Spacer()
+
                     Button(action: {withAnimation{vm.isLogin.toggle()}}, label: {
                         VStack {
                             
@@ -62,11 +62,21 @@ struct MainRegister: View {
                         
                     })
                     
-                    Spacer()
                     
                 }
                 .frame(height:40)
-                
+                .padding(.horizontal,64)
+
+                ZStack {
+                    RegisterView(vm:vm)
+                        .transition(.move(edge: .leading))
+                        .opacity(vm.isLogin ? 1 : 0)
+                    
+                    if !vm.isLogin {
+                        LoginView(vm: vm)
+                            .transition(.move(edge: .trailing))
+                    }
+                }
                 
                 Spacer()
                 
@@ -76,17 +86,13 @@ struct MainRegister: View {
             }
             
             
-            .padding(.bottom,10)
+//            .padding(.bottom,10)
             .padding(.bottom,getSafeArea()?.bottom)
             .padding(.top,20)
             .frame(width:getFrameSize().width,height:  UIScreen.main.bounds.height/2+200)
             
             .background(Color.white.clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 36)))
             
-            //            .padding(.bottom,getSafeArea()?.bottom)
-            //            .padding(.top,20)
-            //            .background(Color.red.clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 36)))
-            //            .offset(y: vm.showLogin ? 0 : UIScreen.main.bounds.height/2-60)
         }
         .frame(width:getFrameSize().width)
         .background(Color.black.opacity(0.6))

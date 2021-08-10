@@ -106,6 +106,7 @@ struct HomeWelcome: View {
                 
                 MainRegister(vm:vm)
                     .transition(.move(edge: .bottom))
+                    
 
             }
         }
