@@ -18,6 +18,7 @@ class HomeWelcomeViewModel: ObservableObject {
     @Published var isValidRegister = false
     @Published var isValidLogin = false
     @Published var isValidForget = false
+    @Published var isValidChangePass = false
 
     
     @Published var emailReg = ""
@@ -28,6 +29,9 @@ class HomeWelcomeViewModel: ObservableObject {
     @Published var passwordLogin = ""
     
     @Published var emailForget = ""
+
+    @Published var passwordReset = ""
+    @Published var rePasswordReset = ""
 
 
 }

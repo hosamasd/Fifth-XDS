@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        SuccesForget()
-//        HomeForget(vm: HomeWelcomeViewModel())
+//        HomeChangePass()
+        HomeChangePass(vm: HomeWelcomeViewModel())
     }
 }
 
