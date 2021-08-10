@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4F576C26C25BA100F61F85 /* MainRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F576B26C25BA100F61F85 /* MainRegister.swift */; };
+		4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */; };
+		4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F577026C25C7F00F61F85 /* CustomCorners.swift */; };
+		4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F577326C25F0900F61F85 /* RegisterView.swift */; };
 		4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */; };
 		4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6B126C2433C00183FA3 /* Fifth_XDSApp.swift */; };
 		4E92C6B426C2433C00183FA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6B326C2433C00183FA3 /* ContentView.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E4F576B26C25BA100F61F85 /* MainRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRegister.swift; sourceTree = "<group>"; };
+		4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWelcomeViewModel.swift; sourceTree = "<group>"; };
+		4E4F577026C25C7F00F61F85 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		4E4F577326C25F0900F61F85 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWelcome.swift; sourceTree = "<group>"; };
 		4E92C6AE26C2433C00183FA3 /* Fifth XDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fifth XDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E92C6B126C2433C00183FA3 /* Fifth_XDSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fifth_XDSApp.swift; sourceTree = "<group>"; };
@@ -47,11 +55,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E4F576F26C25C7A00F61F85 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				4E4F577026C25C7F00F61F85 /* CustomCorners.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		4E4F577226C25F0400F61F85 /* reg */ = {
+			isa = PBXGroup;
+			children = (
+				4E4F577326C25F0900F61F85 /* RegisterView.swift */,
+			);
+			path = reg;
+			sourceTree = "<group>";
+		};
 		4E571F6826C24CA000AB5CB0 /* registration */ = {
 			isa = PBXGroup;
 			children = (
 				4E92C6C526C2436B00183FA3 /* HomeInfo.swift */,
 				4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */,
+				4E4F576B26C25BA100F61F85 /* MainRegister.swift */,
 			);
 			path = registration;
 			sourceTree = "<group>";
@@ -108,6 +133,8 @@
 		4E92C6C126C2434600183FA3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E4F577226C25F0400F61F85 /* reg */,
+				4E4F576F26C25C7A00F61F85 /* custom */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -123,6 +150,7 @@
 		4E92C6C326C2434B00183FA3 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -208,14 +236,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E92C6CB26C2468A00183FA3 /* Extensions_ui.swift in Sources */,
+				4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */,
+				4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */,
 				4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */,
 				4E92C6B426C2433C00183FA3 /* ContentView.swift in Sources */,
 				4E92C6C626C2436B00183FA3 /* HomeInfo.swift in Sources */,
+				4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */,
 				4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */,
 				4E92C6CE26C2469500183FA3 /* AppDelegate.swift in Sources */,
 				4E92C6CC26C2468A00183FA3 /* hideKeyboard.swift in Sources */,
 				4E92C6D026C246DD00183FA3 /* KeyboardAwareModifier.swift in Sources */,
 				4E92C6C826C244C800183FA3 /* InfoModel.swift in Sources */,
+				4E4F576C26C25BA100F61F85 /* MainRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

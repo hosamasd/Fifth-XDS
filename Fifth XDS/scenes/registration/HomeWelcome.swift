@@ -8,91 +8,106 @@
 import SwiftUI
 
 struct HomeWelcome: View {
+    
+    @StateObject var vm = HomeWelcomeViewModel()
+    
     var body: some View {
-        VStack {
+        
+        ZStack {
             
-            Spacer()
-            
-            Image("orderSuccess")
-            
-            Text("Welcome")
-                .font(.system(size: 24))
-                .fontWeight(.semibold)
-                .foregroundColor(Color.black.opacity(0.8))
-                .padding(.vertical)
-            
-            Text("Before enjoying Foodmedia services")
-                .font(.system(size: 14))
-                .fontWeight(.semibold)
+            VStack {
+                
+                Spacer()
+                
+                Image("orderSuccess")
+                
+                Text("Welcome")
+                    .font(.system(size: 24))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.black.opacity(0.8))
+                    .padding(.vertical)
+                
+                Text("Before enjoying Foodmedia services")
+                    .font(.system(size: 14))
+                    .fontWeight(.semibold)
 
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color.black.opacity(0.6))
-//                .kerning(20)
-            
-            Text("Please register first")
-                .font(.system(size: 14))
-                .fontWeight(.semibold)
-                .padding(.top,2)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color.black.opacity(0.6))
-            
-            Spacer()
-            
-            VStack(spacing:24) {
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.black.opacity(0.6))
+    //                .kerning(20)
+                
+                Text("Please register first")
+                    .font(.system(size: 14))
+                    .fontWeight(.semibold)
+                    .padding(.top,2)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.black.opacity(0.6))
+                
+                Spacer()
+                
+                VStack(spacing:24) {
+                    Button(action: {}, label: {
+                        
+                        RoundedRectangle(cornerRadius: 10)
+                            
+                            .fill(Color("board"))
+                            .frame(height:50)
+                            
+                            .overlay(
+                                
+                                Text("Create Account"))
+                            .font(.system(size: 14))
+//                            .fontWeight(.bold)
+
+                            .foregroundColor(Color.white)
+                        
+                    })
+              
+                
                 Button(action: {}, label: {
                     
                     RoundedRectangle(cornerRadius: 10)
                         
-                        .fill(Color("board"))
+                        .fill(Color("login"))
                         .frame(height:50)
                         
                         .overlay(
                             
-                            Text("Create Account"))
+                            Text("Login "))
                         .font(.system(size: 14))
-                        .fontWeight(.bold)
-
-                        .foregroundColor(Color.white)
+                        
+//                        .fontWeight(.bold)
+                        .foregroundColor(Color("board"))
                     
                 })
-          
-            
-            Button(action: {}, label: {
                 
-                RoundedRectangle(cornerRadius: 10)
-                    
-                    .fill(Color("login"))
-                    .frame(height:50)
-                    
-                    .overlay(
-                        
-                        Text("Login "))
-                    .font(.system(size: 14))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("board"))
                 
-            })
-            
-            
-            HStack {
-                Text("By logging in or registering, you have agreed to ")
-                    
-                    +
-                    Text(" the Terms And∂ Conditions")
-                    .foregroundColor(Color("c"))
-                    
-                    +
-                    Text(" And")
-                    +
-                    Text(" Privacy Policy.")
-                    .foregroundColor(Color("c"))
-            }
-            .font(.system(size: 10))
-            .multilineTextAlignment(.center)
-            }
-            .padding(.horizontal,64)
-            .padding(.bottom,60)
+                HStack {
+                    Text("By logging in or registering, you have agreed to ")
 
+                        +
+                        Text(" the Terms And∂ Conditions")
+                        .foregroundColor(Color("c"))
+
+                        +
+                        Text(" And")
+                        +
+                        Text(" Privacy Policy.")
+                        .foregroundColor(Color("c"))
+                }
+                .font(.system(size: 10))
+                .multilineTextAlignment(.center)
+                }
+                .padding(.horizontal,64)
+                .padding(.bottom,60)
+
+            }
+            
+            if vm.showLogin{
+                
+                MainRegister(vm:vm)
+                    .transition(.move(edge: .bottom))
+
+            }
         }
     }
 }
