@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E1212B026C2953B00960F28 /* HomeChangePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1212AF26C2953B00960F28 /* HomeChangePass.swift */; };
 		4E1212B326C298D300960F28 /* SuccessNewPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1212B226C298D300960F28 /* SuccessNewPass.swift */; };
+		4E1212B626C29C7300960F28 /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1212B526C29C7300960F28 /* HomeTabBar.swift */; };
+		4E1212B826C29CAE00960F28 /* HomeMainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1212B726C29CAE00960F28 /* HomeMainTabBarViewModel.swift */; };
+		4E1212BA26C29D2000960F28 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1212B926C29D2000960F28 /* TabBar.swift */; };
 		4E4F576C26C25BA100F61F85 /* MainRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F576B26C25BA100F61F85 /* MainRegister.swift */; };
 		4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */; };
 		4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F577026C25C7F00F61F85 /* CustomCorners.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		4E1212AF26C2953B00960F28 /* HomeChangePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChangePass.swift; sourceTree = "<group>"; };
 		4E1212B226C298D300960F28 /* SuccessNewPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessNewPass.swift; sourceTree = "<group>"; };
+		4E1212B526C29C7300960F28 /* HomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
+		4E1212B726C29CAE00960F28 /* HomeMainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainTabBarViewModel.swift; sourceTree = "<group>"; };
+		4E1212B926C29D2000960F28 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4E4F576B26C25BA100F61F85 /* MainRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRegister.swift; sourceTree = "<group>"; };
 		4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWelcomeViewModel.swift; sourceTree = "<group>"; };
 		4E4F577026C25C7F00F61F85 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
@@ -73,6 +79,15 @@
 				4E1212AF26C2953B00960F28 /* HomeChangePass.swift */,
 			);
 			path = "new pass";
+			sourceTree = "<group>";
+		};
+		4E1212B426C29C6900960F28 /* tab */ = {
+			isa = PBXGroup;
+			children = (
+				4E1212B526C29C7300960F28 /* HomeTabBar.swift */,
+				4E1212B926C29D2000960F28 /* TabBar.swift */,
+			);
+			path = tab;
 			sourceTree = "<group>";
 		};
 		4E4F576F26C25C7A00F61F85 /* custom */ = {
@@ -149,6 +164,7 @@
 		4E92C6C026C2434200183FA3 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4E1212B426C29C6900960F28 /* tab */,
 				4E92C6B326C2433C00183FA3 /* ContentView.swift */,
 				4E571F6826C24CA000AB5CB0 /* registration */,
 			);
@@ -176,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */,
+				4E1212B726C29CAE00960F28 /* HomeMainTabBarViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -281,11 +298,14 @@
 				4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */,
 				4ED842E626C275EA00E17565 /* CustomTF.swift in Sources */,
 				4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */,
+				4E1212B626C29C7300960F28 /* HomeTabBar.swift in Sources */,
 				4E1212B026C2953B00960F28 /* HomeChangePass.swift in Sources */,
 				4E92C6CE26C2469500183FA3 /* AppDelegate.swift in Sources */,
 				4ED842EA26C27CE200E17565 /* HomeForget.swift in Sources */,
 				4E92C6CC26C2468A00183FA3 /* hideKeyboard.swift in Sources */,
 				4E92C6D026C246DD00183FA3 /* KeyboardAwareModifier.swift in Sources */,
+				4E1212B826C29CAE00960F28 /* HomeMainTabBarViewModel.swift in Sources */,
+				4E1212BA26C29D2000960F28 /* TabBar.swift in Sources */,
 				4E92C6C826C244C800183FA3 /* InfoModel.swift in Sources */,
 				4E4F576C26C25BA100F61F85 /* MainRegister.swift in Sources */,
 			);

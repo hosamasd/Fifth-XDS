@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        HomeChangePass()
-        HomeChangePass(vm: HomeWelcomeViewModel())
+        HomeTabBar()
+//        HomeChangePass(vm: HomeWelcomeViewModel())
     }
 }
 
