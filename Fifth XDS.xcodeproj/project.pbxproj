@@ -16,6 +16,10 @@
 		4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */; };
 		4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F577026C25C7F00F61F85 /* CustomCorners.swift */; };
 		4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F577326C25F0900F61F85 /* RegisterView.swift */; };
+		4E5713EE26C2A71100FF4ECE /* HomeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5713ED26C2A71100FF4ECE /* HomeProfile.swift */; };
+		4E5713F026C2A99000FF4ECE /* HomeProfileTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5713EF26C2A99000FF4ECE /* HomeProfileTopView.swift */; };
+		4E5713F226C2A9E000FF4ECE /* HomeProfileAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5713F126C2A9E000FF4ECE /* HomeProfileAccount.swift */; };
+		4E5713F526C2AA7800FF4ECE /* ProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5713F426C2AA7800FF4ECE /* ProfileRowView.swift */; };
 		4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */; };
 		4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6B126C2433C00183FA3 /* Fifth_XDSApp.swift */; };
 		4E92C6B426C2433C00183FA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92C6B326C2433C00183FA3 /* ContentView.swift */; };
@@ -43,6 +47,10 @@
 		4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWelcomeViewModel.swift; sourceTree = "<group>"; };
 		4E4F577026C25C7F00F61F85 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		4E4F577326C25F0900F61F85 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		4E5713ED26C2A71100FF4ECE /* HomeProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfile.swift; sourceTree = "<group>"; };
+		4E5713EF26C2A99000FF4ECE /* HomeProfileTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileTopView.swift; sourceTree = "<group>"; };
+		4E5713F126C2A9E000FF4ECE /* HomeProfileAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileAccount.swift; sourceTree = "<group>"; };
+		4E5713F426C2AA7800FF4ECE /* ProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRowView.swift; sourceTree = "<group>"; };
 		4E571F6626C24C9B00AB5CB0 /* HomeWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWelcome.swift; sourceTree = "<group>"; };
 		4E92C6AE26C2433C00183FA3 /* Fifth XDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fifth XDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E92C6B126C2433C00183FA3 /* Fifth_XDSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fifth_XDSApp.swift; sourceTree = "<group>"; };
@@ -109,6 +117,24 @@
 			path = reg;
 			sourceTree = "<group>";
 		};
+		4E5713EC26C2A70500FF4ECE /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				4E5713ED26C2A71100FF4ECE /* HomeProfile.swift */,
+				4E5713F126C2A9E000FF4ECE /* HomeProfileAccount.swift */,
+				4E5713EF26C2A99000FF4ECE /* HomeProfileTopView.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		4E5713F326C2AA6F00FF4ECE /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				4E5713F426C2AA7800FF4ECE /* ProfileRowView.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
 		4E571F6826C24CA000AB5CB0 /* registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +190,7 @@
 		4E92C6C026C2434200183FA3 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4E5713EC26C2A70500FF4ECE /* profile */,
 				4E1212B426C29C6900960F28 /* tab */,
 				4E92C6B326C2433C00183FA3 /* ContentView.swift */,
 				4E571F6826C24CA000AB5CB0 /* registration */,
@@ -174,6 +201,7 @@
 		4E92C6C126C2434600183FA3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E5713F326C2AA6F00FF4ECE /* profile */,
 				4E4F577226C25F0400F61F85 /* reg */,
 				4E4F576F26C25C7A00F61F85 /* custom */,
 			);
@@ -289,6 +317,7 @@
 				4E92C6CB26C2468A00183FA3 /* Extensions_ui.swift in Sources */,
 				4E1212B326C298D300960F28 /* SuccessNewPass.swift in Sources */,
 				4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */,
+				4E5713F226C2A9E000FF4ECE /* HomeProfileAccount.swift in Sources */,
 				4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */,
 				4ED842E826C27A8600E17565 /* LoginView.swift in Sources */,
 				4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */,
@@ -297,17 +326,20 @@
 				4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */,
 				4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */,
 				4ED842E626C275EA00E17565 /* CustomTF.swift in Sources */,
+				4E5713F026C2A99000FF4ECE /* HomeProfileTopView.swift in Sources */,
 				4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */,
 				4E1212B626C29C7300960F28 /* HomeTabBar.swift in Sources */,
 				4E1212B026C2953B00960F28 /* HomeChangePass.swift in Sources */,
 				4E92C6CE26C2469500183FA3 /* AppDelegate.swift in Sources */,
 				4ED842EA26C27CE200E17565 /* HomeForget.swift in Sources */,
 				4E92C6CC26C2468A00183FA3 /* hideKeyboard.swift in Sources */,
+				4E5713EE26C2A71100FF4ECE /* HomeProfile.swift in Sources */,
 				4E92C6D026C246DD00183FA3 /* KeyboardAwareModifier.swift in Sources */,
 				4E1212B826C29CAE00960F28 /* HomeMainTabBarViewModel.swift in Sources */,
 				4E1212BA26C29D2000960F28 /* TabBar.swift in Sources */,
 				4E92C6C826C244C800183FA3 /* InfoModel.swift in Sources */,
 				4E4F576C26C25BA100F61F85 /* MainRegister.swift in Sources */,
+				4E5713F526C2AA7800FF4ECE /* ProfileRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
