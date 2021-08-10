@@ -15,6 +15,9 @@ class HomeWelcomeViewModel: ObservableObject {
     @Published var isLogin = true
     @Published var showLogin = true
     
+    @Published var isSuccessNewPass = false
+
+    
     @Published var isValidRegister = false
     @Published var isValidLogin = false
     @Published var isValidForget = false
