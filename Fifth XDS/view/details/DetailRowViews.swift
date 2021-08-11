@@ -64,7 +64,8 @@ struct DetailRowViews: View {
             
         }
         .cornerRadius(10)
-        
+        .modifier(viewModifiers())
+
     }
 }
 

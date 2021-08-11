@@ -41,6 +41,11 @@
 		4ED842E826C27A8600E17565 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842E726C27A8600E17565 /* LoginView.swift */; };
 		4ED842EA26C27CE200E17565 /* HomeForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842E926C27CE200E17565 /* HomeForget.swift */; };
 		4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED842EC26C2802000E17565 /* SuccesForget.swift */; };
+		4EE44B2D26C3C664000B1509 /* MainHomeScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE44B2C26C3C664000B1509 /* MainHomeScenes.swift */; };
+		4EE44B2F26C3C68D000B1509 /* MainHomeScenesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE44B2E26C3C68D000B1509 /* MainHomeScenesTopView.swift */; };
+		4EE44B3126C3C936000B1509 /* MainHomeScenesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE44B3026C3C936000B1509 /* MainHomeScenesViewModel.swift */; };
+		4EE44B3326C3CAE0000B1509 /* FoodRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE44B3226C3CAE0000B1509 /* FoodRowViews.swift */; };
+		4EE44B3526C3CE80000B1509 /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE44B3426C3CE80000B1509 /* viewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +85,11 @@
 		4ED842E726C27A8600E17565 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4ED842E926C27CE200E17565 /* HomeForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeForget.swift; sourceTree = "<group>"; };
 		4ED842EC26C2802000E17565 /* SuccesForget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesForget.swift; sourceTree = "<group>"; };
+		4EE44B2C26C3C664000B1509 /* MainHomeScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeScenes.swift; sourceTree = "<group>"; };
+		4EE44B2E26C3C68D000B1509 /* MainHomeScenesTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeScenesTopView.swift; sourceTree = "<group>"; };
+		4EE44B3026C3C936000B1509 /* MainHomeScenesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeScenesViewModel.swift; sourceTree = "<group>"; };
+		4EE44B3226C3CAE0000B1509 /* FoodRowViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRowViews.swift; sourceTree = "<group>"; };
+		4EE44B3426C3CE80000B1509 /* viewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +123,8 @@
 		4E49AAF626C3A58600E8730F /* homes */ = {
 			isa = PBXGroup;
 			children = (
-				4E49AAF726C3A59500E8730F /* DetailRestaurant.swift */,
-				4E49AB0126C3AC5B00E8730F /* DetailRowViews.swift */,
-				4E49AAFB26C3AAC500E8730F /* DetailRestaurantCenterView.swift */,
-				4E49AAF926C3A72400E8730F /* DetailRestaurantTopView.swift */,
+				4EE44B2C26C3C664000B1509 /* MainHomeScenes.swift */,
+				4EE44B2E26C3C68D000B1509 /* MainHomeScenesTopView.swift */,
 			);
 			path = homes;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			children = (
 				4E4F577026C25C7F00F61F85 /* CustomCorners.swift */,
 				4ED842E526C275EA00E17565 /* CustomTF.swift */,
+				4EE44B3426C3CE80000B1509 /* viewModifiers.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 		4E92C6C026C2434200183FA3 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4EE44B2B26C3C64C000B1509 /* details */,
 				4E49AAF626C3A58600E8730F /* homes */,
 				4E5713EC26C2A70500FF4ECE /* profile */,
 				4E1212B426C29C6900960F28 /* tab */,
@@ -225,6 +235,8 @@
 		4E92C6C126C2434600183FA3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4EE44B2A26C3C645000B1509 /* details */,
+				4EE44B2926C3C63F000B1509 /* home */,
 				4E5713F326C2AA6F00FF4ECE /* profile */,
 				4E4F577226C25F0400F61F85 /* reg */,
 				4E4F576F26C25C7A00F61F85 /* custom */,
@@ -247,6 +259,7 @@
 				4E4F576D26C25BD800F61F85 /* HomeWelcomeViewModel.swift */,
 				4E1212B726C29CAE00960F28 /* HomeMainTabBarViewModel.swift */,
 				4E49AAFD26C3AAF800E8730F /* DetailRestaurantViewModel.swift */,
+				4EE44B3026C3C936000B1509 /* MainHomeScenesViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -269,6 +282,32 @@
 				4E4F576B26C25BA100F61F85 /* MainRegister.swift */,
 			);
 			path = "log&reg";
+			sourceTree = "<group>";
+		};
+		4EE44B2926C3C63F000B1509 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4EE44B3226C3CAE0000B1509 /* FoodRowViews.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		4EE44B2A26C3C645000B1509 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				4E49AB0126C3AC5B00E8730F /* DetailRowViews.swift */,
+				4E49AAFB26C3AAC500E8730F /* DetailRestaurantCenterView.swift */,
+				4E49AAF926C3A72400E8730F /* DetailRestaurantTopView.swift */,
+			);
+			path = details;
+			sourceTree = "<group>";
+		};
+		4EE44B2B26C3C64C000B1509 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				4E49AAF726C3A59500E8730F /* DetailRestaurant.swift */,
+			);
+			path = details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,17 +386,22 @@
 				4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */,
 				4E5713F226C2A9E000FF4ECE /* HomeProfileAccount.swift in Sources */,
 				4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */,
+				4EE44B2F26C3C68D000B1509 /* MainHomeScenesTopView.swift in Sources */,
 				4ED842E826C27A8600E17565 /* LoginView.swift in Sources */,
 				4E49AB0226C3AC5B00E8730F /* DetailRowViews.swift in Sources */,
 				4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */,
+				4EE44B3326C3CAE0000B1509 /* FoodRowViews.swift in Sources */,
 				4E92C6B426C2433C00183FA3 /* ContentView.swift in Sources */,
 				4E92C6C626C2436B00183FA3 /* HomeInfo.swift in Sources */,
 				4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */,
 				4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */,
+				4EE44B3126C3C936000B1509 /* MainHomeScenesViewModel.swift in Sources */,
 				4E49AAF826C3A59500E8730F /* DetailRestaurant.swift in Sources */,
+				4EE44B2D26C3C664000B1509 /* MainHomeScenes.swift in Sources */,
 				4ED842E626C275EA00E17565 /* CustomTF.swift in Sources */,
 				4E5713F026C2A99000FF4ECE /* HomeProfileTopView.swift in Sources */,
 				4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */,
+				4EE44B3526C3CE80000B1509 /* viewModifiers.swift in Sources */,
 				4E49AB0026C3AB5700E8730F /* ResatrantModel.swift in Sources */,
 				4E1212B626C29C7300960F28 /* HomeTabBar.swift in Sources */,
 				4E1212B026C2953B00960F28 /* HomeChangePass.swift in Sources */,

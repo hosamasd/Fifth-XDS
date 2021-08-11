@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct DetailRestaurantCenterView: View {
+    var tt = ""
+    var des = ""
+    
+    
     var body: some View {
         VStack(alignment:.leading) {
             Text("Tava Restaurant")
