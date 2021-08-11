@@ -20,7 +20,8 @@ struct DetailRestaurant: View {
 
             
             DetailRestaurantCenterView()
-            
+                .padding(.bottom,20)
+                
             if vm.restArray.isEmpty {
                 Text("No Results Found")
                     .padding(.top,20)
@@ -29,15 +30,47 @@ struct DetailRestaurant: View {
                 
                     
                     
-                    LazyVGrid(columns: columns,spacing: 20){
+                VStack {
+                    
+                    VStack(spacing:2) {
                         
-                        
-                        ForEach(vm.restArray){gradient in
+                        HStack {
+                            Text("List other restaurant")
+                                .font(.system(size: 14))
+                                .fontWeight(.semibold)
+                            Spacer()
                             
-                            DetailRowViews(x: gradient)
+                            Text("See All")
+                                .font(.system(size: 12))
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color("board"))
+                                .padding(.trailing,16)
                         }
+                        
+                        HStack {
+                            Text("check the menu at this restaurant")
+                                .font(.system(size: 10))
+                                .fontWeight(.regular)
+                                .foregroundColor(Color.gray.opacity(0.6))
+                            Spacer()
+                            
+                           Image("Vector")
+                        }
+
                     }
-                    .frame(width: getFrameSize().width-32)//, height: 200)
+//                    .padding(.horizontal)
+                    
+                    LazyVGrid(columns: columns,spacing: 20){
+                            
+                            
+                            ForEach(vm.restArray){gradient in
+                                
+                                DetailRowViews(x: gradient)
+                            }
+                        }
+                }//, height: 200)
+                .frame(width: getFrameSize().width-32)
+
                     
                 }
             }

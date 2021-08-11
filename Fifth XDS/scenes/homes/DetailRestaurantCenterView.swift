@@ -14,7 +14,7 @@ struct DetailRestaurantCenterView: View {
                 .font(.system(size: 20))
                 .fontWeight(.semibold)
                 .frame(maxWidth:.infinity,alignment: .leading)
-                .padding(.horizontal,16)
+//                .padding(.horizontal,16)
 
             Label(
                 title: {
@@ -27,13 +27,16 @@ struct DetailRestaurantCenterView: View {
                 icon: { Image( "Frssssame") }
             )
             .frame(maxWidth:.infinity,alignment: .leading)
-            .padding(.horizontal,16)
+//            .padding(.horizontal,16)
 
             Image("Rectangle 387")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: getFrameSize().width-24, height: 190)
                 .padding(.vertical,24)
+
+                .frame(width: getFrameSize().width-24, height: 190)
+                .cornerRadius(10)
+
             
             Label(
                 title: {
@@ -48,11 +51,12 @@ struct DetailRestaurantCenterView: View {
             )
             .frame(maxWidth:.infinity,alignment: .leading)
             .padding(.horizontal,16)
+            .padding(.top)
 
             HStack {
                 
                 Text("10:00 AM - 12:00 PM")
-                    .font(.system(size: 20))
+                    .font(.system(size: 12))
                     .fontWeight(.regular)
                 
                 Spacer()
@@ -69,6 +73,7 @@ struct DetailRestaurantCenterView: View {
                     icon: { Image( "directions_black_24dp 1") }
                 )
             }
+            .padding(.top,-8)
             .padding(.bottom,20)
             .padding(.horizontal,16)
 
@@ -79,6 +84,7 @@ struct DetailRestaurantCenterView: View {
         .frame(width: getFrameSize().width-32)//, height: 200)
         
         .cornerRadius(16)
+        
 
     }
 }
