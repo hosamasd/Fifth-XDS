@@ -24,7 +24,7 @@ struct HomeTabBar: View {
             }
             
             else {
-                Color.red
+                HomeProfile()
                 
                 //                    SecondMainHome()
             }
