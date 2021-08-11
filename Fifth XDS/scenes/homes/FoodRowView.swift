@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FoodRowView: View {
     var x =         FoodModel(title: "Sauce Tonkatsu  ", pic: "Rectangle 387", desc: "We are here with the best\n deserts intown.",picS: "image 2")
+    @Binding var index:Int
+    var q = 0
     
     var body: some View {
         VStack {
@@ -64,6 +66,7 @@ struct FoodRowView: View {
                     .aspectRatio(contentMode: .fill)
                 
             }
+            .padding(.horizontal)
             
         }
         .background(
@@ -71,8 +74,14 @@ struct FoodRowView: View {
             LinearGradient(gradient: Gradient(colors: [Color("led"), Color("tr")]), startPoint: .leading, endPoint: .trailing)
         )
         .frame(height:130)
-        .cornerRadius(16)
+//        .frame(height: index == q ?  280 : 130)
+        .cornerRadius(30)
         .padding(.horizontal,32)
+        .tag(index)
+
+//        .frame(height:130)
+//        .cornerRadius(30)
+//        .padding(.horizontal,32)
     }
 }
 

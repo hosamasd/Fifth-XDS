@@ -35,8 +35,8 @@ class MainHomeScenesViewModel: ObservableObject {
         FoodModel(title: "Flash Offer ", pic: "Pizza 1", desc: "We are here with the best \n deserts intown.",picS: "image 1"),
         FoodModel(title: "Sauce Tonkatsu  ", pic: "Pizza 1", desc: "We are here with the best\ndeserts intown.",picS: "image 2"),
         FoodModel(title: "Flash Offer ", pic: "Pizza 1", desc: "We are here with the best\ndeserts intown."),
-        FoodModel(title: "Chicken Katsu ", pic: "Pizza 1", desc:"We are here with the best\ndeserts intown.",picS: "image 2"),
-        FoodModel(title: "Flash Offer  ", pic: "Pizza 1", desc:"We are here with the best\ndeserts intown."),
+//        FoodModel(title: "Chicken Katsu ", pic: "Pizza 1", desc:"We are here with the best\ndeserts intown.",picS: "image 2"),
+//        FoodModel(title: "Flash Offer  ", pic: "Pizza 1", desc:"We are here with the best\ndeserts intown."),
         
     ]
     

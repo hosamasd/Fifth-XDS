@@ -13,25 +13,51 @@ struct FoodTabsView: View {
 
     var body: some View {
         
-        TabView(selection: self.$index){
-            
-            ForEach(0...vm.foodArray.count-1,id: \.self){index in
+        VStack {
+            HStack {
+                TabView(selection: self.$index){
+                    
+                    ForEach(0...vm.secondFoodArray.count-1,id: \.self){index in
+  
+                        FoodRowView(x: vm.secondFoodArray[index],index: $index,q: index)
+
+//                        FoodRowView(x: vm.secondFoodArray[index])
+        //                Image("p\(index)")
+        //                    .resizable()
+        //                    // adding animation...
+        //                    .cornerRadius(15)
+        //                    .padding(.horizontal)
+        //                    // for identifying current index....
+//                            .tag(index)
+                    }
+                    
+                }
+                .frame(height:130)
                 
-                FoodRowView(x: vm.secondFoodArray[index])
-//                Image("p\(index)")
-//                    .resizable()
-//                    // adding animation...
-//                    .frame(height: self.index == index ?  230 : 180)
-//                    .cornerRadius(15)
-//                    .padding(.horizontal)
-//                    // for identifying current index....
-//                    .tag(index)
+                .padding(.top,16)
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))//        .tabViewStyle(.none)
+                .animation(.easeOut)
             }
+            
         }
-        .frame(height:230)
-        .padding(.top,25)
-        .tabViewStyle(PageTabViewStyle())
-        .animation(.easeOut)
+        
+        HStack(spacing:2) {
+            ForEach(0...self.vm.secondFoodArray.count-1,id: \.self){i in
+                
+                
+                ZStack {
+                    
+                    
+                    Circle()
+                        .fill(self.index == i ? Color("board") : Color.gray.opacity(0.2))
+                        .frame(height:10)
+                    
+                }
+            }
+            .frame(width:15)
+        }
+        .padding()
+
     }
 }
 

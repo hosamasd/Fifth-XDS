@@ -23,7 +23,11 @@ struct MainHomeScenes: View {
             VStack {
                 
 
-                FoodTabsView(vm:vm)
+                VStack {
+                    
+                    FoodTabsView(vm:vm)
+                    
+                }
                 
                 VStack(spacing:4) {
                     
