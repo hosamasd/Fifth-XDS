@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeChangePass: View {
     @ObservedObject var vm : HomeWelcomeViewModel
     @Environment(\.presentationMode) var presentationMode
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    //    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
@@ -18,7 +18,8 @@ struct HomeChangePass: View {
                 
                 HStack {
                     Button(action: {withAnimation{
-                        presentationMode.wrappedValue.dismiss()
+                        vm.showNewPass.toggle()
+                        //                        presentationMode.wrappedValue.dismiss()
                     }}, label: {
                         Image("aaaa")
                         
@@ -26,89 +27,86 @@ struct HomeChangePass: View {
                     Spacer()
                 }
                 .padding(.horizontal)
+                .opacity(vm.isSuccesNewPasss ? 0 : 1)
                 
                 ZStack {
                     
-                    VStack(alignment:.leading) {
-                        Text("Change New Password")
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                            .padding(.bottom,12)
-                        
-                        Text("Enter your registered email below")
-                            .font(.system(size: 16))
-                            .foregroundColor(Color.gray.opacity(0.6))
-                            .padding(.bottom,40)
-                        
-                        Text("New Password")
-                            .foregroundColor(Color.gray.opacity(0.6))
+                    VStack {
+                        VStack(alignment:.leading) {
+                            Text("Change New Password")
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
+                                .padding(.bottom,12)
                             
-                            .padding(.leading)
-                        
-                        CustomTF(txt: $vm.passwordReset,hint: "",isHide: true)
-                        
-                        Text("Confarm Password")
-                            .foregroundColor(Color.gray.opacity(0.6))
+                            Text("Enter your registered email below")
+                                .font(.system(size: 16))
+                                .foregroundColor(Color.gray.opacity(0.6))
+                                .padding(.bottom,40)
                             
-                            .padding(.leading)
+                            Text("New Password")
+                                .foregroundColor(Color.gray.opacity(0.6))
+                                
+                                .padding(.leading,2)
+
+                            CustomTF(txt: $vm.passwordReset,hint: "",isHide: true)
+                            
+                            Text("Confarm Password")
+                                .foregroundColor(Color.gray.opacity(0.6))
+                                
+                                .padding(.leading,2)
+                            
+                            CustomTF(txt: $vm.rePasswordReset,hint: "",isHide: true)
+                            
+                        }
+                        .padding(.horizontal,32)
+                        .padding(.top,60)
+                        .padding(.leading)
                         
-                        CustomTF(txt: $vm.rePasswordReset,hint: "",isHide: true)
+                        
+                        
+                        
+                        Spacer()
+                        
+                        Button(action: {withAnimation{
+                            vm.makeNewPassword()
+                        }}, label: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(vm.checkNewPass() ? Color("board") : Color.gray.opacity(0.2))
+                                .overlay(
+                                    
+                                    Text("Submit")
+                                        .font(.system(size: 14))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor( vm.checkNewPass() ? Color.white : Color.black.opacity(0.2))
+                                    
+                                )
+                        })
+                        .frame( height: 50)
+                        
+                        .padding(.horizontal,64)
                         
                     }
-                    .padding(.horizontal,32)
-                    .padding(.top,60)
-                    .padding(.leading)
-                    .opacity(vm.isSuccessNewPass ? 0 : 1)
+                    .padding(.bottom,40)
+
+                    .opacity(vm.isSuccesNewPasss ? 0 : 1)
                     
-                    if vm.isSuccessNewPass {
-                        SuccessNewPass()
+                    
+                    if vm.isSuccesNewPasss {
+                        SuccessNewPass(vm:vm)
                             .transition(.move(edge: .trailing))
                         //                    Spacer()
                     }
                 }
                 
-                
-                
-                Spacer()
-                
-                Button(action: {withAnimation{
-                    vm.isSuccessNewPass.toggle()
-                }}, label: {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(vm.isValidChangePass ? Color("board") : Color.gray.opacity(0.2))
-                        .overlay(
-                            
-                            Text("Submit")
-                                .font(.system(size: 14))
-                                .fontWeight(.semibold)
-                                .foregroundColor( vm.isValidChangePass ? Color.white : Color.black.opacity(0.2))
-                            
-                        )
-                })
-                .frame( height: 50)
-                
-                .padding(.bottom,40)
-                .padding(.horizontal,64)
-                
-                
-                
             }
             
             if vm.isLooding {
                 UArcView()
-                    .transition(.move(edge: .bottom))
                 
             }
             
             
             
-        }
-        .onReceive(timer) { input in
-            
-            if vm.isSuccesNewPasss {
-                presentationMode.wrappedValue.dismiss()
-                vm.isSuccesNewPasss.toggle()
-            }
         }
     }
 }

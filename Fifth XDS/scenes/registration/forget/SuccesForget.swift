@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SuccesForget: View {
+    @ObservedObject var vm:HomeWelcomeViewModel
     var body: some View {
         VStack {
             
@@ -34,7 +35,7 @@ struct SuccesForget: View {
             
             Label(
                 title: {
-                    Button(action: {}, label: {
+                    Button(action: {withAnimation{vm.isSuccesForget.toggle()}}, label: {
                         Text("Resubmit")
                             .font(.system(size: 14))
                             .foregroundColor(Color("board"))
@@ -53,7 +54,7 @@ struct SuccesForget: View {
             
             Spacer()
             
-            Button(action: {}, label: {
+            Button(action: {withAnimation{vm.showNewPass.toggle()}}, label: {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(  Color("board") )
                     .overlay(
@@ -75,6 +76,6 @@ struct SuccesForget: View {
 
 struct SuccesForget_Previews: PreviewProvider {
     static var previews: some View {
-        SuccesForget()
+        SuccesForget(vm: HomeWelcomeViewModel())
     }
 }

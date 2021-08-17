@@ -21,6 +21,8 @@ class HomeWelcomeViewModel: ObservableObject {
     @Published var isSuccesNewPasss = false
     
     @Published var showLogin = false
+    @Published var showForget = false
+    @Published var showNewPass = false
     
     @Published var isSuccessNewPass = false
     
@@ -56,55 +58,45 @@ class HomeWelcomeViewModel: ObservableObject {
         checkPassword(x:passwordLogin) && emailLogin.isValidEmail
     }
     
+    func   checkForget()->Bool{
+        emailForget.isValidEmail
+    }
+    
+    func checkPasswordAndRe() -> Bool {
+        passwordReset==rePasswordReset
+    }
+    
+    func  checkNewPass()->Bool{
+        checkPassword(x:passwordReset) && checkPasswordAndRe()
+    }
+    
     func   checkSignUp()->Bool{
         checkPassword(x:passwordReg) && emailReg.isValidEmail && checkPassword(x:nameReg)
     }
     
-    func forgetPasswords()  {
-        
-        if !emailForget.isValidEmail {
-            self.alertMsg = "Please type valid Phone number"
-            self.alert.toggle()
-            return
-        }
-        
-        withAnimation{
-            
-            self.isLooding.toggle()
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
-            withAnimation{self.isLooding.toggle()}
-            DispatchQueue.main.async {
-                self.isSuccesForget.toggle()
-                //                self.isForget.toggle()
-                
-            }
-        }
-        
-    }
+    
     
     func makeSignUp()  {
         
-        if !checkUserName() {
-            self.alertMsg = "Please type valid Username"
-            self.alert.toggle()
-            return
-        }
-        
-        
-        
-        if !emailReg.isValidEmail {
-            self.alertMsg = "Please type valid Phone number"
-            self.alert.toggle()
-            return
-        }
-        
-        if !checkPassword(x:passwordReg) {
-            self.alertMsg = "Please type valid Password"
-            self.alert.toggle()
-            return
-        }
+//        if !checkUserName() {
+//            self.alertMsg = "Please type valid Username"
+//            self.alert.toggle()
+//            return
+//        }
+//
+//
+//
+//        if !emailReg.isValidEmail {
+//            self.alertMsg = "Please type valid Phone number"
+//            self.alert.toggle()
+//            return
+//        }
+//
+//        if !checkPassword(x:passwordReg) {
+//            self.alertMsg = "Please type valid Password"
+//            self.alert.toggle()
+//            return
+//        }
         
         
         
@@ -129,17 +121,17 @@ class HomeWelcomeViewModel: ObservableObject {
     
     func makeLogin()  {
         
-        if !emailLogin.isValidEmail {
-            self.alertMsg = "Please type valid Phone number"
-            self.alert.toggle()
-            return
-        }
-        
-        if !checkPassword(x:passwordLogin) {
-            self.alertMsg = "Please type valid Password"
-            self.alert.toggle()
-            return
-        }
+//        if !emailLogin.isValidEmail {
+//            self.alertMsg = "Please type valid Phone number"
+//            self.alert.toggle()
+//            return
+//        }
+//
+//        if !checkPassword(x:passwordLogin) {
+//            self.alertMsg = "Please type valid Password"
+//            self.alert.toggle()
+//            return
+//        }
         
         withAnimation{
             
@@ -155,5 +147,50 @@ class HomeWelcomeViewModel: ObservableObject {
         }
     }
     
+    func makeNewPassword()  {
+        withAnimation{
+            
+            self.isLooding.toggle()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                //                self.showForget.toggle()
+                //                self.isUserLogin.toggle()
+                
+                self.isSuccesNewPasss.toggle()
+                //                self.isForget.toggle()
+                
+            }
+        }
+    }
+    
+    func forgetPasswords()  {
+        
+//        if !emailForget.isValidEmail {
+//            self.alertMsg = "Please type valid Phone number"
+//            self.alert.toggle()
+//            return
+//        }
+        
+        withAnimation{
+            
+            self.isLooding.toggle()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+            withAnimation{self.isLooding.toggle()}
+            DispatchQueue.main.async {
+                //                self.showForget.toggle()
+                //                self.isUserLogin.toggle()
+                
+                self.isSuccesForget.toggle()
+                //                self.isForget.toggle()
+                
+            }
+        }
+        
+    }
     
 }

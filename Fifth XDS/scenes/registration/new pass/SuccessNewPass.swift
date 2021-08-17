@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SuccessNewPass: View {
+    @ObservedObject var vm:HomeWelcomeViewModel
+    
     var body: some View {
         VStack {
             
@@ -33,12 +35,32 @@ struct SuccessNewPass: View {
                 .multilineTextAlignment(.center)
             
             Spacer()
+            
+            Button(action: {withAnimation{vm.showNewPass.toggle()
+                vm.showForget.toggle()
+            }}, label: {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(  Color("board") )
+                    .overlay(
+                        
+                        Text("Sign In")
+                            .font(.system(size: 14))
+                            .fontWeight(.semibold)
+                            .foregroundColor(  Color.white )
+                        
+                    )
+            })
+            .frame( height: 50)
+            
+            .padding(.bottom,40)
+            .padding(.horizontal,64)
+            
         }
     }
 }
 
 struct SuccessNewPass_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessNewPass()
+        SuccessNewPass(vm: HomeWelcomeViewModel())
     }
 }

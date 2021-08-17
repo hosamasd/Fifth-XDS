@@ -147,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1212AF26C2953B00960F28 /* HomeChangePass.swift */,
+				4E1212B226C298D300960F28 /* SuccessNewPass.swift */,
 			);
 			path = "new pass";
 			sourceTree = "<group>";
@@ -215,7 +216,6 @@
 			children = (
 				4E4F577326C25F0900F61F85 /* RegisterView.swift */,
 				4ED842E726C27A8600E17565 /* LoginView.swift */,
-				4E1212B226C298D300960F28 /* SuccessNewPass.swift */,
 			);
 			path = reg;
 			sourceTree = "<group>";
@@ -243,8 +243,7 @@
 			children = (
 				4E92C6C526C2436B00183FA3 /* HomeInfo.swift */,
 				4ED842EB26C27CF200E17565 /* log&reg */,
-				4ED842E926C27CE200E17565 /* HomeForget.swift */,
-				4ED842EC26C2802000E17565 /* SuccesForget.swift */,
+				4EA260F426CB8CA90016167F /* forget */,
 				4E1212B126C2986700960F28 /* new pass */,
 			);
 			path = registration;
@@ -347,6 +346,15 @@
 				4E92C6CF26C246DD00183FA3 /* KeyboardAwareModifier.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		4EA260F426CB8CA90016167F /* forget */ = {
+			isa = PBXGroup;
+			children = (
+				4ED842E926C27CE200E17565 /* HomeForget.swift */,
+				4ED842EC26C2802000E17565 /* SuccesForget.swift */,
+			);
+			path = forget;
 			sourceTree = "<group>";
 		};
 		4ED842EB26C27CF200E17565 /* log&reg */ = {

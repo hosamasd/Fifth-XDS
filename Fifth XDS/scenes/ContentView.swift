@@ -11,17 +11,18 @@ struct ContentView: View {
     @AppStorage("isFIrstOpen") var isFIrstOpen: Bool = false
 
     var body: some View {
-        VStack {
-            
-            if isFIrstOpen {
-                HomeWelcome()
-            }
-            else {
-                HomeInfo()
-            }
-            
-        }
-//        HomeWelcome()
+//        VStack {
+//
+//            if isFIrstOpen {
+        HomeChangePass(vm: HomeWelcomeViewModel())
+//            }
+//            else {
+//                HomeInfo()
+//            }
+//
+//        }
+//        HomeForget(vm: HomeWelcomeViewModel())
+
 //        HomeChangePass(vm: HomeWelcomeViewModel())
     }
 }

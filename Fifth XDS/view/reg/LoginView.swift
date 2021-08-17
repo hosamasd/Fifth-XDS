@@ -32,7 +32,7 @@ struct LoginView: View {
                 HStack {
                     Spacer()
                     
-                    Button(action: {}, label: {
+                    Button(action: {withAnimation{vm.showForget.toggle()}}, label: {
                         Text("Forget Password?")
                             .font(.system(size: 12))
                             .fontWeight(.semibold)
@@ -93,6 +93,11 @@ struct LoginView: View {
             .padding(.bottom)
             
         }
+        
+        .fullScreenCover(isPresented: $vm.showForget, content: {
+            HomeForget(vm: vm)
+            
+        })
     }
 }
 
