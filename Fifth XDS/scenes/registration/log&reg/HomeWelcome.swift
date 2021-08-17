@@ -119,7 +119,7 @@ struct HomeWelcome: View {
             }
             
             if vm.isLooding {
-                UArcView()
+                UArcView(height:100)
 //                    .transition(.move(edge: .bottom))
                 
             }

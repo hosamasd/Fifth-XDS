@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DetailRestaurantTopView: View {
+    @EnvironmentObject var vm:DetailRestaurantViewModel
+
     var body: some View {
         
         RoundedRectangle(cornerRadius: 24)
@@ -17,7 +19,7 @@ struct DetailRestaurantTopView: View {
             
                 HStack{
                     
-                    Button(action: {}, label: {
+                    Button(action: {withAnimation{vm.showDetail.toggle()}}, label: {
                         Image(systemName: "arrow.backward")
                             .foregroundColor(.white)
                         

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct DetailRestaurant: View {
-    @StateObject var vm = DetailRestaurantViewModel()
+//    @StateObject var vm = DetailRestaurantViewModel()
     @State var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 1)
-    
+    @EnvironmentObject var vm:DetailRestaurantViewModel
+
     var body: some View {
         VStack {
             
             DetailRestaurantTopView()
+                .environmentObject(vm)
             
             ScrollView(.vertical, showsIndicators: false) {
                 

@@ -78,25 +78,6 @@ class HomeWelcomeViewModel: ObservableObject {
     
     func makeSignUp()  {
         
-//        if !checkUserName() {
-//            self.alertMsg = "Please type valid Username"
-//            self.alert.toggle()
-//            return
-//        }
-//
-//
-//
-//        if !emailReg.isValidEmail {
-//            self.alertMsg = "Please type valid Phone number"
-//            self.alert.toggle()
-//            return
-//        }
-//
-//        if !checkPassword(x:passwordReg) {
-//            self.alertMsg = "Please type valid Password"
-//            self.alert.toggle()
-//            return
-//        }
         
         
         
@@ -164,11 +145,6 @@ class HomeWelcomeViewModel: ObservableObject {
     
     func forgetPasswords()  {
         
-//        if !emailForget.isValidEmail {
-//            self.alertMsg = "Please type valid Phone number"
-//            self.alert.toggle()
-//            return
-//        }
         
         withAnimation{
             
@@ -178,9 +154,6 @@ class HomeWelcomeViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
             withAnimation{self.isLooding.toggle()}
             DispatchQueue.main.async {
-                //                self.showForget.toggle()
-                //                self.isUserLogin.toggle()
-                
                 self.isSuccesForget.toggle()
                 //                self.isForget.toggle()
                 

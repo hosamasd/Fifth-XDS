@@ -43,6 +43,8 @@ struct HomeProfileAccount: View {
 
             )
             .frame(width:getFrameSize().width-48,height:70)
+            .modifier(viewModifiers())
+
     }
 }
 

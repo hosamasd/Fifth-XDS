@@ -117,8 +117,8 @@ struct HomeForget: View {
             //        }
             
             if vm.isLooding {
-                UArcView()
-                
+                UArcView(height:100)
+
             }
             
             

@@ -11,6 +11,7 @@ struct UArcView: View {
     @State var shouldAnimate: Bool = false
     var timer = Timer.publish(every: 0.25, on: .main, in: .default).autoconnect()
     @State var progress: CGFloat = 0
+    var height:CGFloat = 200
     
     var body: some View {
             ZStack {
@@ -32,7 +33,7 @@ struct UArcView: View {
             }
             .rotationEffect(self.shouldAnimate ? .degrees(360) : .zero)
             .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false))
-            .frame(width: 200, height: 200)
+            .frame(width: height, height: height)
             
             }
             .onAppear {

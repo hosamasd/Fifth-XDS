@@ -23,10 +23,10 @@ struct ContentView: View {
                             .transition(.move(edge: .bottom))
 
                     }
-                    
+                    else {
                     HomeWelcome()
-                        .opacity(isUserLogin ? 0 : 1)
-                    
+//                        .opacity(isUserLogin ? 0 : 1)
+                    }
                 }
                
                 

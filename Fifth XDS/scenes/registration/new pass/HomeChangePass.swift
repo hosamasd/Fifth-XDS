@@ -21,8 +21,8 @@ struct HomeChangePass: View {
                         vm.showNewPass.toggle()
                         //                        presentationMode.wrappedValue.dismiss()
                     }}, label: {
-                        Image("aaaa")
-                        
+                        Image("Frame-4")
+
                     })
                     Spacer()
                 }
@@ -101,8 +101,8 @@ struct HomeChangePass: View {
             }
             
             if vm.isLooding {
-                UArcView()
-                
+                UArcView(height:100)
+
             }
             
             
