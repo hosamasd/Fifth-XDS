@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainHomeScenesTopView: View {
     @State var txt = ""
+    @Binding var show:Bool
     var body: some View {
         VStack {
             HStack{
@@ -17,17 +18,29 @@ struct MainHomeScenesTopView: View {
                 
                 Spacer()
                 
-                Label(
-                    title: { Text("Agrabad 435, Chittagong")
-                        .offset(y:-15)
-                        
-                    },
-                    icon: { Image( "Frssssame") }
-                )
+                
+                Button(action: {withAnimation{show.toggle()}}, label: {
+                    
+//                    NavigationLink(destination:
+//                    HomeMapView()
+//                    ) {
+                    
+               
+                    Label(
+                        title: { Text("Agrabad 435, Chittagong")
+                            .offset(y:-15)
+                            
+                        },
+                        icon: { Image( "Frssssame") }
+                    )
+//                    }
+                })
                 
                 Spacer()
                 
-                Image("Ellipse 4")
+                Image("pict")
+                    .resizable()
+                    .frame(width: 32, height: 32)
                 
                 
                 

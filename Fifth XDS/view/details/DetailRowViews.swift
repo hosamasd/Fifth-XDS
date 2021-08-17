@@ -24,6 +24,7 @@ struct DetailRowViews: View {
                 Image(x.pic)
                     .resizable()
                     .frame(width: 50, height: 50)
+                    .cornerRadius(8)
                 
                 VStack(alignment: .leading, spacing: 4, content: {
                     Text(x.title)

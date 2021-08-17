@@ -9,9 +9,22 @@ import SwiftUI
 
 struct HomeForget: View {
     @ObservedObject var vm : HomeWelcomeViewModel
+    @Environment(\.presentationMode) var presentationMode
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
+            
+            HStack {
+                Button(action: {withAnimation{
+                    presentationMode.wrappedValue.dismiss()
+                }}, label: {
+                    Image("aaaa")
+                    
+                })
+                Spacer()
+            }
+            .padding(.horizontal)
             
             VStack(alignment:.leading) {
                 Text("Forget Password")
@@ -32,11 +45,12 @@ struct HomeForget: View {
                 
                 Label(
                     title: {
-                        Button(action: {}, label: {
-                        Text("Sign in")
-                            .font(.system(size: 14))
-                            .foregroundColor(Color("board"))
-                    })
+                        Button(action: {withAnimation{                    presentationMode.wrappedValue.dismiss()
+                        }}, label: {
+                            Text("Sign in")
+                                .font(.system(size: 14))
+                                .foregroundColor(Color("board"))
+                        })
                         
                     },
                     icon: {
@@ -52,7 +66,7 @@ struct HomeForget: View {
             .padding(.horizontal,32)
             .padding(.top,60)
             .padding(.leading)
-
+            
             Spacer()
             
             Button(action: {}, label: {
@@ -66,13 +80,20 @@ struct HomeForget: View {
                             .foregroundColor( vm.isValidLogin ? Color.white : Color.black.opacity(0.2))
                         
                     )
-        })
+            })
             .frame( height: 50)
-
+            
             .padding(.bottom,40)
             .padding(.horizontal,64)
             
             
+        }
+        .onReceive(timer) { input in
+            
+            if vm.isSuccesForget {
+                presentationMode.wrappedValue.dismiss()
+                vm.isSuccesForget.toggle()
+            }
         }
     }
 }

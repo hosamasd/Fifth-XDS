@@ -30,10 +30,10 @@ struct HomeWelcome: View {
                 Text("Before enjoying Foodmedia services")
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
-
+                    
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color.black.opacity(0.6))
-    //                .kerning(20)
+                //                .kerning(20)
                 
                 Text("Please register first")
                     .font(.system(size: 14))
@@ -45,7 +45,10 @@ struct HomeWelcome: View {
                 Spacer()
                 
                 VStack(spacing:24) {
-                    Button(action: {}, label: {
+                    Button(action: {withAnimation{
+                            vm.isLogin=true
+
+                            vm.showLogin.toggle()}}, label: {
                         
                         RoundedRectangle(cornerRadius: 10)
                             
@@ -56,58 +59,69 @@ struct HomeWelcome: View {
                                 
                                 Text("Create Account"))
                             .font(.system(size: 14))
-//                            .fontWeight(.bold)
-
+                            //                            .fontWeight(.bold)
+                            
                             .foregroundColor(Color.white)
                         
                     })
-              
-                
-                Button(action: {}, label: {
                     
-                    RoundedRectangle(cornerRadius: 10)
-                        
-                        .fill(Color("login"))
-                        .frame(height:50)
-                        
-                        .overlay(
+                    
+                    Button(action: {withAnimation{
+                            vm.isLogin=false
+                            vm.showLogin.toggle()}}, label: {
+                                
+                                RoundedRectangle(cornerRadius: 10)
+                                    
+                                    .fill(Color("login"))
+                                    .frame(height:50)
+                                    
+                                    .overlay(
+                                        
+                                        Text("Login "))
+                                    .font(.system(size: 14))
+                                    
+                                    //                        .fontWeight(.bold)
+                                    .foregroundColor(Color("board"))
+                                
+                            })
+                    
+                    
+                    HStack {
+                        Text("By logging in or registering, you have agreed to ")
                             
-                            Text("Login "))
-                        .font(.system(size: 14))
-                        
-//                        .fontWeight(.bold)
-                        .foregroundColor(Color("board"))
-                    
-                })
-                
-                
-                HStack {
-                    Text("By logging in or registering, you have agreed to ")
-
-                        +
-                        Text(" the Terms And∂ Conditions")
-                        .foregroundColor(Color("c"))
-
-                        +
-                        Text(" And")
-                        +
-                        Text(" Privacy Policy.")
-                        .foregroundColor(Color("c"))
-                }
-                .font(.system(size: 10))
-                .multilineTextAlignment(.center)
+                            +
+                            Text(" the Terms And∂ Conditions")
+                            .foregroundColor(Color("c"))
+                            
+                            +
+                            Text(" And")
+                            +
+                            Text(" Privacy Policy.")
+                            .foregroundColor(Color("c"))
+                    }
+                    .font(.system(size: 10))
+                    .multilineTextAlignment(.center)
                 }
                 .padding(.horizontal,64)
                 .padding(.bottom,60)
-
+                
             }
+//            .onTapGesture{
+//                vm.showLogin.toggle()
+//            }
             
             if vm.showLogin{
                 
                 MainRegister(vm:vm)
                     .transition(.move(edge: .bottom))
-                    
-
+                
+                
+            }
+            
+            if vm.isLooding {
+                UArcView()
+//                    .transition(.move(edge: .bottom))
+                
             }
         }
     }

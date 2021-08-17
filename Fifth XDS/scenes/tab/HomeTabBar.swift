@@ -14,13 +14,11 @@ struct HomeTabBar: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
 
             if vm.index == 0 {
-                Color.orange
+                BookingHistory()
                
             }
             else if vm.index == 1 {
-                //                    EitDebitWallet()
-                //                        .environmentObject(vm)
-                Color.red
+                BookingHistory()
             }
             
             else {
@@ -36,6 +34,7 @@ struct HomeTabBar: View {
                 
         })
         .edgesIgnoringSafeArea(.all)
+//        .background(Color.red)
 
     }
 }

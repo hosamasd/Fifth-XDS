@@ -11,7 +11,7 @@ struct RegisterView: View {
     @ObservedObject var vm : HomeWelcomeViewModel
     
     var body: some View {
-        ScrollView(isSmallDevice() ? .vertical : .vertical) {
+        ScrollView(isSmallDevice() ? .vertical : .vertical,showsIndicators: false) {
             VStack() {
                 
                 VStack(alignment:.leading,spacing:24) {
@@ -32,21 +32,24 @@ struct RegisterView: View {
                     Text("Password")
                         .padding(.leading)
                     
-                    CustomTF(txt: $vm.nameReg,hint: "Password",isHide: true)
+                    CustomTF(txt: $vm.passwordReg,hint: "Password",isHide: true)
                     
                 }
                 .padding(.horizontal,32)
                 .padding(.vertical,24)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    withAnimation{vm.makeSignUp()}
+                    
+                }, label: {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(vm.isValidRegister ? Color("board") : Color.gray.opacity(0.2))
+                        .fill(vm.checkSignUp() ? Color("board") : Color.gray.opacity(0.2))
                         .overlay(
                             
                             Text("Registration")
                                 .font(.system(size: 14))
                                 .fontWeight(.semibold)
-                                .foregroundColor( vm.isValidRegister ? Color.white : Color.black.opacity(0.2))
+                                .foregroundColor( vm.checkSignUp() ? Color.white : Color.black.opacity(0.2))
                             
                         )
                     

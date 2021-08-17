@@ -47,15 +47,17 @@ struct LoginView: View {
             .padding(.horizontal,32)
             .padding(.vertical,24)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                withAnimation{vm.makeLogin()}
+            }, label: {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(vm.isValidLogin ? Color("board") : Color.gray.opacity(0.2))
+                    .fill(vm.checkLogin() ? Color("board") : Color.gray.opacity(0.2))
                     .overlay(
                         
                         Text("Login")
                             .font(.system(size: 14))
                             .fontWeight(.semibold)
-                            .foregroundColor( vm.isValidLogin ? Color.white : Color.black.opacity(0.2))
+                            .foregroundColor( vm.checkLogin() ? Color.white : Color.black.opacity(0.2))
                         
                     )
                 

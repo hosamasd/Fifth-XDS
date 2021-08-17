@@ -13,7 +13,13 @@ struct MainRegister: View {
     var body: some View {
         VStack {
             
-            Spacer()
+            VStack {
+                
+                Spacer()
+                
+            }
+            .background(Color.red)
+            
             
             VStack(spacing:8) {
                 
@@ -43,7 +49,7 @@ struct MainRegister: View {
                     })
                     
                     Spacer()
-
+                    
                     Button(action: {withAnimation{vm.isLogin.toggle()}}, label: {
                         VStack {
                             
@@ -66,7 +72,7 @@ struct MainRegister: View {
                 }
                 .frame(height:40)
                 .padding(.horizontal,64)
-
+                
                 ZStack {
                     RegisterView(vm:vm)
                         .transition(.move(edge: .leading))
@@ -86,18 +92,23 @@ struct MainRegister: View {
             }
             
             
-//            .padding(.bottom,10)
+            //            .padding(.bottom,10)
             .padding(.bottom,getSafeArea()?.bottom)
             .padding(.top,20)
             .frame(width:getFrameSize().width,height:  UIScreen.main.bounds.height/2+200)
             
             .background(Color.white.clipShape(CustomCorners(corners: [.topLeft,.topRight],width: 36)))
-            
+            .onTapGesture(perform: {
+                withAnimation{vm.showLogin=true}
+            })
         }
         .frame(width:getFrameSize().width)
         .background(Color.black.opacity(0.6))
         //        .padding(.bottom,10)
         //        .padding(.bottom,getSafeArea()?.bottom)
+        .onTapGesture(perform: {
+            withAnimation{vm.showLogin=false}
+        })
         .edgesIgnoringSafeArea(.all)
         
     }
@@ -105,6 +116,6 @@ struct MainRegister: View {
 
 struct MainRegister_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeWelcome()
     }
 }

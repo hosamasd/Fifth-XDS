@@ -21,6 +21,9 @@ struct FoodTabsView: View {
   
                         FoodRowView(x: vm.secondFoodArray[index],index: $index,q: index)
 
+//                            .frame(width:getFrameSize().width-32,height: self.index == index ?  280 : 130)
+//                               .cornerRadius(30)
+//                               .padding(.horizontal,32)
 //                        FoodRowView(x: vm.secondFoodArray[index])
         //                Image("p\(index)")
         //                    .resizable()
@@ -28,7 +31,7 @@ struct FoodTabsView: View {
         //                    .cornerRadius(15)
         //                    .padding(.horizontal)
         //                    // for identifying current index....
-//                            .tag(index)
+                            .tag(index)
                     }
                     
                 }

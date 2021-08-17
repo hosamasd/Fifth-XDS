@@ -26,11 +26,13 @@ struct DetailRestaurantCenterView: View {
                     Text("kazi Deiry, Taiger Pass,Chittagong")
                         .font(.system(size: 12))
                         .fontWeight(.semibold)
+                        .foregroundColor(Color.gray.opacity(0.6))
                     
                 },
                 icon: { Image( "Frssssame") }
             )
             .frame(maxWidth:.infinity,alignment: .leading)
+            .padding(.bottom,24)
 //            .padding(.horizontal,16)
 
             Image("Rectangle 387")
@@ -38,8 +40,10 @@ struct DetailRestaurantCenterView: View {
                 .aspectRatio(contentMode: .fill)
                 .padding(.vertical,24)
 
-                .frame(width: getFrameSize().width-24, height: 190)
+                .frame(height:190)
+//                .frame(width: getFrameSize().width-24, height: 190)
                 .cornerRadius(10)
+                .padding(.bottom)
 
             
             Label(
@@ -84,8 +88,9 @@ struct DetailRestaurantCenterView: View {
         }
         
         .padding(.vertical)
+        .padding(.horizontal,24)
         .background(Color.white)
-        .frame(width: getFrameSize().width-32)//, height: 200)
+//        .frame(width: getFrameSize().width-32)//, height: 200)
         
         .cornerRadius(16)
         
@@ -95,6 +100,7 @@ struct DetailRestaurantCenterView: View {
 
 struct DetailRestaurantCenterView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailRestaurant()
+        ContentView()
+//        DetailRestaurant()
     }
 }

@@ -12,7 +12,7 @@ struct TabBar: View {
 
     var body: some View {
         HStack {
-            HStack{
+            HStack(spacing:32){
                 
                 Spacer()
                 
@@ -38,18 +38,19 @@ struct TabBar: View {
                 
             }
             .padding(.horizontal,32)
-            
+            .padding(.top,-20)
+
 
         }
     //        .padding()
 
-            .frame(width: getFrameSize().width, height: 70)
-        .border(Color.gray.opacity(0.6), width: 2)
-
+            .frame(width: getFrameSize().width, height: 90)
+//        .padding(.bottom,isFaoundBottomSafe()! - 16)
             .background(Color.white)
         
         .clipShape(CustomCorners(corners: [.topLeft,.topRight], width: 20))
-
+        .shadow(color: Color.gray.opacity(0.6), radius: 5, x: 5, y: 5)
+        .shadow(color: Color.gray.opacity(0.6), radius: 5, x: 5, y: -5)
 
     }
 }

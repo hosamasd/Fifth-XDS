@@ -32,18 +32,18 @@ struct FoodRowView: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color.white.opacity(0.6))
                         .lineLimit(3)
-//                        .padding(.bottom)
+                    //                        .padding(.bottom)
                     
-                  
+                    
                     Label(
                         title: {
                             Image( systemName: "chevron.forward")
                                 .resizable()
                                 .frame(width: 3, height: 7)
                                 .foregroundColor(.white)
-                                
-
-
+                            
+                            
+                            
                         },
                         icon: {
                             Text("Order")
@@ -52,7 +52,7 @@ struct FoodRowView: View {
                                 .foregroundColor(.white)
                                 .offset(y:-4)
                         }
-
+                        
                     )
                     .padding(.bottom,-12)
                     .padding(.top)
@@ -70,18 +70,17 @@ struct FoodRowView: View {
             
         }
         .background(
-        
+            
             LinearGradient(gradient: Gradient(colors: [Color("led"), Color("tr")]), startPoint: .leading, endPoint: .trailing)
         )
+        //        .frame(width:getFrameSize().width-32,height: self.index == index ?  280 : 130)
+        
         .frame(height:130)
-//        .frame(height: index == q ?  280 : 130)
+        ////        .frame(height: index == q ?  280 : 130)
         .cornerRadius(30)
         .padding(.horizontal,32)
         .tag(index)
-
-//        .frame(height:130)
-//        .cornerRadius(30)
-//        .padding(.horizontal,32)
+        
     }
 }
 

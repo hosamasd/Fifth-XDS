@@ -17,6 +17,8 @@ struct HomeInfo: View {
         
         
     ]
+    @AppStorage("isFIrstOpen") var isFIrstOpen: Bool = false
+
     var colors:[Color] = [.red,.blue,.gray]
     @State var offset:CGFloat = 0
     @State var index = 0
@@ -61,12 +63,7 @@ struct HomeInfo: View {
                 
                 Button(action: {
                     withAnimation(.easeInOut){
-                        if index > 0 {
-                            self.index = index-1
-                        }
-                        else {
-                            //                        show.toggle()
-                        }
+                       isFIrstOpen = true
                     }
                 }, label: {
                     
@@ -104,12 +101,9 @@ struct HomeInfo: View {
                             self.index = index+1
                         }
                         else {
-                            //                        show.toggle()
+                            isFIrstOpen = true
+
                         }
-                        
-                        //                    show.toggle()
-                        //                    self.selection = "VERIFY AND RECEIVE"
-                        //                shoeSizeView = true
                     }
                 }, label: {
                     

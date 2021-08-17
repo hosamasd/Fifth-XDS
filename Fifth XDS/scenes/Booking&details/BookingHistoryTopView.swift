@@ -1,15 +1,14 @@
 //
-//  DetailRestaurantTopView.swift
+//  BookingHistoryTopView.swift
 //  Fifth XDS
 //
-//  Created by hosam on 11/08/2021.
+//  Created by hosam on 16/08/2021.
 //
 
 import SwiftUI
 
-struct DetailRestaurantTopView: View {
+struct BookingHistoryTopView: View {
     var body: some View {
-        
         RoundedRectangle(cornerRadius: 24)
             .fill(Color("board"))
             .frame(width: getFrameSize().width,height: 100)
@@ -17,31 +16,26 @@ struct DetailRestaurantTopView: View {
             
                 HStack{
                     
-                    Button(action: {}, label: {
-                        Image(systemName: "arrow.backward")
-                            .foregroundColor(.white)
+                  
                         
                         Spacer()
                         
-                        Text("Details Restaurant")
+                        Text("Booking History")
                             .foregroundColor(.white)
+                            .offset(y:-20)
                         
                         Spacer()
-                    })
                     
                 }
                 .padding(.top,30)
                 .padding(.horizontal)
             )
-            .offset(y:-20)
-        
-//            .padding(.top,20)
+//            .offset(y:-20)
     }
 }
 
-struct DetailRestaurantTopView_Previews: PreviewProvider {
+struct BookingHistoryTopView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-//        DetailRestaurant()
+        BookingHistoryTopView()
     }
 }

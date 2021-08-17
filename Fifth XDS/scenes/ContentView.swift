@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isFIrstOpen") var isFIrstOpen: Bool = false
+
     var body: some View {
-        MainHomeScenes()
+        VStack {
+            
+            if isFIrstOpen {
+                HomeWelcome()
+            }
+            else {
+                HomeInfo()
+            }
+            
+        }
+//        HomeWelcome()
 //        HomeChangePass(vm: HomeWelcomeViewModel())
     }
 }
