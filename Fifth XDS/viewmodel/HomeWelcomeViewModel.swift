@@ -156,11 +156,7 @@ class HomeWelcomeViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
             withAnimation{self.isLooding.toggle()}
             DispatchQueue.main.async {
-                //                self.showForget.toggle()
-                //                self.isUserLogin.toggle()
-                
                 self.isSuccesNewPasss.toggle()
-                //                self.isForget.toggle()
                 
             }
         }

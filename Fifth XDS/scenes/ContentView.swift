@@ -9,21 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("isFIrstOpen") var isFIrstOpen: Bool = false
-
+    @AppStorage("isUserLogin") var isUserLogin: Bool = false
+    
     var body: some View {
-//        VStack {
-//
-//            if isFIrstOpen {
-        HomeChangePass(vm: HomeWelcomeViewModel())
-//            }
-//            else {
-//                HomeInfo()
-//            }
-//
-//        }
-//        HomeForget(vm: HomeWelcomeViewModel())
+        VStack {
+            
+            if isFIrstOpen {
+                
+                ZStack {
+                    
+                    if isUserLogin {
+                        HomeTabBar()
+                            .transition(.move(edge: .bottom))
 
-//        HomeChangePass(vm: HomeWelcomeViewModel())
+                    }
+                    
+                    HomeWelcome()
+                        .opacity(isUserLogin ? 0 : 1)
+                    
+                }
+               
+                
+            }
+            else {
+                HomeInfo()
+            }
+            
+        }
+        //        HomeForget(vm: HomeWelcomeViewModel())
+        
+        //        HomeChangePass(vm: HomeWelcomeViewModel())
     }
 }
 

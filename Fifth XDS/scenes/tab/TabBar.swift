@@ -17,18 +17,18 @@ struct TabBar: View {
                 Spacer()
                 
                 Button(action: {withAnimation{vm.index=0}}, label: {
-                    Image("Frame")
+                    Image(vm.index == 0 ? "Frame" : "Frame-3")
                 })
                 
                 Spacer()
                 
-                Button(action: {withAnimation{vm.index=0}}, label: {
+                Button(action: {withAnimation{vm.index=1}}, label: {
                     Image(vm.index == 1 ? "Frassme" : "Framse")
                 })
                 
                 Spacer()
                 
-                Button(action: {withAnimation{vm.index=0}}, label: {
+                Button(action: {withAnimation{vm.index=2}}, label: {
                     Image(vm.index == 2 ? "Framxxxe" : "Framsse")
                 })
                 

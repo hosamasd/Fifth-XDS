@@ -12,6 +12,8 @@ struct HomeProfile: View {
         VStack {
             
             HomeProfileTopView()
+                .padding(.top,80)
+
             
             VStack(spacing:16) {
                 HomeProfileAccount()

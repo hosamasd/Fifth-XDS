@@ -14,7 +14,7 @@ struct HomeTabBar: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
 
             if vm.index == 0 {
-                BookingHistory()
+                MainHomeScenes()
                
             }
             else if vm.index == 1 {
@@ -29,8 +29,6 @@ struct HomeTabBar: View {
             
                 
                 TabBar(vm: vm)
-//                    .environmentObject(vm)
-                //                    .disabled(vm.isDisabledTabBar)
                 
         })
         .edgesIgnoringSafeArea(.all)

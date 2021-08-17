@@ -12,10 +12,10 @@ struct HomeProfileTopView: View {
         RoundedRectangle(cornerRadius: 10)
             .fill(Color.white)
             .overlay(
-            
+                
                 HStack(spacing:16) {
                     
-                    Image(systemName: "person.crop.circle.fill")
+                    Image("pict")
                         .resizable()
                         .frame(width: 45, height: 45)
                     
@@ -30,7 +30,7 @@ struct HomeProfileTopView: View {
                                 .font(.system(size: 10))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.gray.opacity(0.6))
-
+                            
                         })
                         Spacer()
                         
@@ -39,7 +39,7 @@ struct HomeProfileTopView: View {
                             
                             Circle()
                                 .fill(Color("logs"))
-
+                                
                                 .frame(width: 12, height: 12)
                                 .offset(x: 6, y: -15)
                             
@@ -48,10 +48,10 @@ struct HomeProfileTopView: View {
                     
                 }
                 .padding(.horizontal,16)
-
+                
             )
             .frame(width:getFrameSize().width-48,height:70)
-
+        
     }
 }
 
