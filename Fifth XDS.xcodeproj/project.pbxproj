@@ -21,18 +21,9 @@
 		4E3A367C26CA299A0082FD9B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A367B26CA299A0082FD9B /* MapViewModel.swift */; };
 		4E3A367F26CA29DE0082FD9B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A367E26CA29DD0082FD9B /* MapView.swift */; };
 		4E3A368126CA29EC0082FD9B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A368026CA29EC0082FD9B /* Place.swift */; };
-		4E3B25C526CA8EA5003CD262 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25C326CA8EA5003CD262 /* ArcView.swift */; };
-		4E3B25C626CA8EA5003CD262 /* GroupActView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25C426CA8EA5003CD262 /* GroupActView.swift */; };
-		4E3B25CF26CA8EB0003CD262 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25C726CA8EAF003CD262 /* LoadingView.swift */; };
-		4E3B25D026CA8EB0003CD262 /* LoadingCircleGradual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25C826CA8EAF003CD262 /* LoadingCircleGradual.swift */; };
-		4E3B25D126CA8EB0003CD262 /* LoadingCircleOpacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25C926CA8EAF003CD262 /* LoadingCircleOpacity.swift */; };
-		4E3B25D226CA8EB0003CD262 /* LoadingCircleColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25CA26CA8EB0003CD262 /* LoadingCircleColors.swift */; };
-		4E3B25D326CA8EB0003CD262 /* LoadingCircleFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25CB26CA8EB0003CD262 /* LoadingCircleFlip.swift */; };
-		4E3B25D426CA8EB0003CD262 /* LoadingCapsuleSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25CC26CA8EB0003CD262 /* LoadingCapsuleSpacing.swift */; };
-		4E3B25D526CA8EB0003CD262 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25CD26CA8EB0003CD262 /* ActivityIndicator.swift */; };
-		4E3B25D626CA8EB0003CD262 /* LoadingCubeOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25CE26CA8EB0003CD262 /* LoadingCubeOffset.swift */; };
 		4E3B25D826CA8F44003CD262 /* UArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B25D726CA8F44003CD262 /* UArcView.swift */; };
 		4E3CF7B426CBAA6700A98628 /* HomeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CF7B326CBAA6700A98628 /* HomeProfileViewModel.swift */; };
+		4E3CF7B626CBB1DF00A98628 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CF7B526CBB1DF00A98628 /* ArcView.swift */; };
 		4E49AAF826C3A59500E8730F /* DetailRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49AAF726C3A59500E8730F /* DetailRestaurant.swift */; };
 		4E49AAFA26C3A72400E8730F /* DetailRestaurantTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49AAF926C3A72400E8730F /* DetailRestaurantTopView.swift */; };
 		4E49AAFC26C3AAC500E8730F /* DetailRestaurantCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49AAFB26C3AAC500E8730F /* DetailRestaurantCenterView.swift */; };
@@ -84,18 +75,9 @@
 		4E3A367B26CA299A0082FD9B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		4E3A367E26CA29DD0082FD9B /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4E3A368026CA29EC0082FD9B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		4E3B25C326CA8EA5003CD262 /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
-		4E3B25C426CA8EA5003CD262 /* GroupActView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupActView.swift; sourceTree = "<group>"; };
-		4E3B25C726CA8EAF003CD262 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		4E3B25C826CA8EAF003CD262 /* LoadingCircleGradual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCircleGradual.swift; sourceTree = "<group>"; };
-		4E3B25C926CA8EAF003CD262 /* LoadingCircleOpacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCircleOpacity.swift; sourceTree = "<group>"; };
-		4E3B25CA26CA8EB0003CD262 /* LoadingCircleColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCircleColors.swift; sourceTree = "<group>"; };
-		4E3B25CB26CA8EB0003CD262 /* LoadingCircleFlip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCircleFlip.swift; sourceTree = "<group>"; };
-		4E3B25CC26CA8EB0003CD262 /* LoadingCapsuleSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCapsuleSpacing.swift; sourceTree = "<group>"; };
-		4E3B25CD26CA8EB0003CD262 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		4E3B25CE26CA8EB0003CD262 /* LoadingCubeOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCubeOffset.swift; sourceTree = "<group>"; };
 		4E3B25D726CA8F44003CD262 /* UArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UArcView.swift; sourceTree = "<group>"; };
 		4E3CF7B326CBAA6700A98628 /* HomeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileViewModel.swift; sourceTree = "<group>"; };
+		4E3CF7B526CBB1DF00A98628 /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		4E49AAF726C3A59500E8730F /* DetailRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurant.swift; sourceTree = "<group>"; };
 		4E49AAF926C3A72400E8730F /* DetailRestaurantTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantTopView.swift; sourceTree = "<group>"; };
 		4E49AAFB26C3AAC500E8730F /* DetailRestaurantCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantCenterView.swift; sourceTree = "<group>"; };
@@ -172,23 +154,6 @@
 			path = map;
 			sourceTree = "<group>";
 		};
-		4E3B25C226CA8E97003CD262 /* lood view */ = {
-			isa = PBXGroup;
-			children = (
-				4E3B25CD26CA8EB0003CD262 /* ActivityIndicator.swift */,
-				4E3B25CC26CA8EB0003CD262 /* LoadingCapsuleSpacing.swift */,
-				4E3B25CA26CA8EB0003CD262 /* LoadingCircleColors.swift */,
-				4E3B25CB26CA8EB0003CD262 /* LoadingCircleFlip.swift */,
-				4E3B25C826CA8EAF003CD262 /* LoadingCircleGradual.swift */,
-				4E3B25C926CA8EAF003CD262 /* LoadingCircleOpacity.swift */,
-				4E3B25CE26CA8EB0003CD262 /* LoadingCubeOffset.swift */,
-				4E3B25C726CA8EAF003CD262 /* LoadingView.swift */,
-				4E3B25C326CA8EA5003CD262 /* ArcView.swift */,
-				4E3B25C426CA8EA5003CD262 /* GroupActView.swift */,
-			);
-			path = "lood view";
-			sourceTree = "<group>";
-		};
 		4E49AAF626C3A58600E8730F /* homes */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,10 +169,10 @@
 		4E4F576F26C25C7A00F61F85 /* custom */ = {
 			isa = PBXGroup;
 			children = (
-				4E3B25C226CA8E97003CD262 /* lood view */,
 				4E4F577026C25C7F00F61F85 /* CustomCorners.swift */,
 				4ED842E526C275EA00E17565 /* CustomTF.swift */,
 				4EE44B3426C3CE80000B1509 /* viewModifiers.swift */,
+				4E3CF7B526CBB1DF00A98628 /* ArcView.swift */,
 				4E3B25D726CA8F44003CD262 /* UArcView.swift */,
 			);
 			path = custom;
@@ -472,43 +437,34 @@
 				4E0DC69C26CA7DDE00536AD6 /* BookingHistoryTopView.swift in Sources */,
 				4E1212B326C298D300960F28 /* SuccessNewPass.swift in Sources */,
 				4E4F577126C25C7F00F61F85 /* CustomCorners.swift in Sources */,
-				4E3B25D326CA8EB0003CD262 /* LoadingCircleFlip.swift in Sources */,
 				4E5713F226C2A9E000FF4ECE /* HomeProfileAccount.swift in Sources */,
 				4E4F577426C25F0900F61F85 /* RegisterView.swift in Sources */,
 				4EE44B2F26C3C68D000B1509 /* MainHomeScenesTopView.swift in Sources */,
 				4E1E778C26C3E2D60093477C /* FoodTabsView.swift in Sources */,
 				4E0DC69A26CA7DBD00536AD6 /* BookingHistory.swift in Sources */,
 				4ED842E826C27A8600E17565 /* LoginView.swift in Sources */,
-				4E3B25CF26CA8EB0003CD262 /* LoadingView.swift in Sources */,
 				4E49AB0226C3AC5B00E8730F /* DetailRowViews.swift in Sources */,
-				4E3B25C626CA8EA5003CD262 /* GroupActView.swift in Sources */,
-				4E3B25D526CA8EB0003CD262 /* ActivityIndicator.swift in Sources */,
 				4E3A367C26CA299A0082FD9B /* MapViewModel.swift in Sources */,
 				4E571F6726C24C9B00AB5CB0 /* HomeWelcome.swift in Sources */,
 				4EE44B3326C3CAE0000B1509 /* FoodRowViews.swift in Sources */,
 				4E92C6B426C2433C00183FA3 /* ContentView.swift in Sources */,
 				4E92C6C626C2436B00183FA3 /* HomeInfo.swift in Sources */,
-				4E3B25D626CA8EB0003CD262 /* LoadingCubeOffset.swift in Sources */,
 				4E4F576E26C25BD800F61F85 /* HomeWelcomeViewModel.swift in Sources */,
-				4E3B25D426CA8EB0003CD262 /* LoadingCapsuleSpacing.swift in Sources */,
+				4E3CF7B626CBB1DF00A98628 /* ArcView.swift in Sources */,
 				4E92C6B226C2433C00183FA3 /* Fifth_XDSApp.swift in Sources */,
 				4EE44B3126C3C936000B1509 /* MainHomeScenesViewModel.swift in Sources */,
 				4E49AAF826C3A59500E8730F /* DetailRestaurant.swift in Sources */,
 				4EE44B2D26C3C664000B1509 /* MainHomeScenes.swift in Sources */,
 				4ED842E626C275EA00E17565 /* CustomTF.swift in Sources */,
 				4E5713F026C2A99000FF4ECE /* HomeProfileTopView.swift in Sources */,
-				4E3B25C526CA8EA5003CD262 /* ArcView.swift in Sources */,
 				4ED842ED26C2802000E17565 /* SuccesForget.swift in Sources */,
 				4E1E779026C3E4280093477C /* FoodRowView.swift in Sources */,
 				4E3A367F26CA29DE0082FD9B /* MapView.swift in Sources */,
-				4E3B25D026CA8EB0003CD262 /* LoadingCircleGradual.swift in Sources */,
 				4EE44B3526C3CE80000B1509 /* viewModifiers.swift in Sources */,
 				4E2688B826C41657003D2E4E /* HomeMapView.swift in Sources */,
 				4E49AB0026C3AB5700E8730F /* ResatrantModel.swift in Sources */,
 				4E1212B626C29C7300960F28 /* HomeTabBar.swift in Sources */,
-				4E3B25D126CA8EB0003CD262 /* LoadingCircleOpacity.swift in Sources */,
 				4E1212B026C2953B00960F28 /* HomeChangePass.swift in Sources */,
-				4E3B25D226CA8EB0003CD262 /* LoadingCircleColors.swift in Sources */,
 				4E3A368126CA29EC0082FD9B /* Place.swift in Sources */,
 				4E92C6CE26C2469500183FA3 /* AppDelegate.swift in Sources */,
 				4ED842EA26C27CE200E17565 /* HomeForget.swift in Sources */,
